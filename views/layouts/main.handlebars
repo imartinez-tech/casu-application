@@ -2,43 +2,84 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fund My Project!</title>
-  <link rel="stylesheet" href="/css/jass.css">
-  <link rel="stylesheet" href="/css/style.css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> CASU </title>
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/flexslider.css" type="text/css">
+  <link href="css/styles.css?v=1.6" rel="stylesheet">
+  <link href="css/queries.css?v=1.6" rel="stylesheet">
+  <link href="css/jquery.fancybox.css" rel="stylesheet">
+  <!-- Fonts -->
+  <link
+    href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic'
+    rel='stylesheet' type='text/css'>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
 </head>
 
 <body>
-  <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        <span role="img" aria-label="money">💸</span>
-        <a href="/">Fund My Project!</a>
-      </h1>
-      <nav>
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-      </nav>
-    </header>
-    <main class="container container-fluid mt-5">
+  <section class="navigation">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
+          <nav class="pull">
+            <ul class="top-nav">
+              <li><a href="#getstarted">CREATE PROFILE <span class="indicator"><i
+                      class="fa fa-angle-right"></i></span></a></li>
+              <li><a href="#media">LEADER BOARD <span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+              </li>
+              <li><a href="#features">RULES <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+              <li class="nav-last"><a href="#design">CONTACT <span class="indicator"><i
+                      class="fa fa-angle-right"></i></span></a></li>
+            </ul>
+            <!-- Conditionally render login or logout links -->
+            {{#if logged_in}}
+            <a href="/profile">profile</a> |
+            <button class="no-button" id="logout">logout</button>
+            {{else}}
+            <a href="/login">login</a>
+            {{/if}}
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="hero" id="hero">
+    <div class="container">
       <!-- Render the sub layout -->
       {{{ body }}}
-    </main>
-    <footer>
-      
-    </footer>
-  </div>
 
-  <!-- Render script for logged in users only -->
+    </div>
+  </section>
+  <footer>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <a href="#" class="badge-btn">Badge Button</a>
+      </div>
+    </div>
+      <!-- Render script for logged in users only -->
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
+  </footer>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="js/jquery.fancybox.pack.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/scripts.js?v=1.7"></script>
+  <script src="js/jquery.flexslider.js"></script>
+  <script src="js/jquery.smooth-scroll.js"></script>
+  <script src="js/modernizr.js"></script>
+  <script src="js/waypoints.min.js"></script>
 </body>
 
 </html>
