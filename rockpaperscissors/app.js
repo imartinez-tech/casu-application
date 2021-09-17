@@ -114,3 +114,4 @@
   
   //start the game function
   game();
+  ...
