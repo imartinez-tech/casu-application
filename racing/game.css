@@ -1,4 +1,4 @@
-body {background-image: url(/Users/ibraimmartinez/Desktop/project-2/images/bg.png); margin: 0; padding: 0; font-family: calibri, sans-serif;}
+.body {background-image: url(/Users/ibraimmartinez/Desktop/project-2/images/bg.png); margin: 0; padding: 0; font-family: calibri, sans-serif;}
 
 
 aside {display: none; width: 200px; position: fixed; height: 100vh; left: 100%; margin-left: -240px; background-color: #ddd; border-left: 5px solid #bbb; padding: 20px;}

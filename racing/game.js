@@ -1,4 +1,4 @@
-/*Create a Javascript Object for a horse with 3 parameters: HTML ID, position x and y*/
+./*Create a Javascript Object for a horse with 3 parameters: HTML ID, position x and y*/
 function Horse(id, x, y){
 	this.element = document.getElementById(id);/*HTML element of the horse*/
 	this.speed = Math.random()*10 + 10; /*Initiate a random speed for each horse, the greater speed, the faster horse. The value is between 10 and 20*/
