@@ -1,35 +1,35 @@
-body {background-image: url(/Users/ibraimmartinez/Desktop/project-2/images/bg.png); margin: 0; padding: 0; font-family: calibri, sans-serif;}
+body {background-image: url(/racing/images/bg.png); margin: 0; padding: 0; font-family: calibri, sans-serif;}
 
 
 aside {display: none; width: 200px; position: fixed; height: 100vh; left: 100%; margin-left: -240px; background-color: #ddd; border-left: 5px solid #bbb; padding: 20px;}
 #closeside {float: right; font-weight: bold; cursor: pointer;}
 
 .character {position: absolute; top: 200px; left: 200px; display: block;}
-.character .body {width: 32px; height: 32px; background-image: url(/Users/ibraimmartinez/Desktop/project-2); background-position: 64px 0px; margin-top: 14px; }
-.character .head {width: 32px; height: 32px; background-image: url(/Users/ibraimmartinez/Desktop/project-2/Users/ibraimmartinez/Desktop/project-2/images/head0.png); margin-bottom: 0;position: absolute; background-repeat: no-repeat; background-position: 0px -64px;}
+.character .body {width: 32px; height: 32px; background-image: url(/racing/images/body.png); background-position: 64px 0px; margin-top: 14px; }
+.character .head {width: 32px; height: 32px; background-image: url(/racing/images/head0.png); margin-bottom: 0;position: absolute; background-repeat: no-repeat; background-position: 0px -64px;}
 
 aside ul {list-style-type: none; margin-left: 0; padding-left: 0; margin-bottom: 20px; overflow: auto;}
 .heads li, .bodies li {width: 32px; height: 32px; background-position: 0 -64px; float: left; cursor: pointer; border: 2px solid #ddd; margin-right: 4px;}
 .heads li:hover, .bodies li:hover {border: 2px solid red;}
-#head0 {background-image: url(/Users/ibraimmartinez/Desktop/project-2/Users/ibraimmartinez/Desktop/project-2/images/head0.png);}
+#head0 {background-image: url(/racing/images/head0.png);}
 
-#head1 {background-image: url(/Users/ibraimmartinez/Desktop/project-2/Users/ibraimmartinez/Desktop/project-2/images/head1.png);}
-#head2 {background-image: url(/Users/ibraimmartinez/Desktop/project-2/Users/ibraimmartinez/Desktop/project-2/images/head2.png);}
-#head3 {background-image: url(/Users/ibraimmartinez/Desktop/project-2/images/head3.png);}
-#head4 {background-image: url(/Users/ibraimmartinez/Desktop/project-2/Users/ibraimmartinez/Desktop/project-2/images/head4.png);}
+#head1 {background-image: url(/racing/images/head1.png);}
+#head2 {background-image: url(/racing/images/head2.png);}
+#head3 {background-image: url(/racing/images/head3.png);}
+#head4 {background-image: url(/racing/images/head4.png);}
 
 .bodies li {background-position: 64px 0px;}
-#body0 {background-image: url(/Users/ibraimmartinez/Desktop/project-2/images/body0.png);}
-#body1 {background-image: url(/Users/ibraimmartinez/Desktop/project-2/images/body1.png);}
-#body2 {background-image: url(/Users/ibraimmartinez/Desktop/project-2/images/body2.png);}
-#body3 {background-image: url(/Users/ibraimmartinez/Desktop/project-2/images/body3.png);}
-#body4 {background-image: url(/Users/ibraimmartinez/Desktop/project-2/images/body4.png);}
+#body0 {background-image: url(/racing/images/body0.png);}
+#body1 {background-image: url(/racing/images/body1.png);}
+#body2 {background-image: url(/racing/images/body2.png);}
+#body3 {background-image: url(/racing/images/body3.png);}
+#body4 {background-image: url(/racing/images/body4.png);}
 
 .tree {float: right; margin-top: 2vh; margin-right: 5vw;}
 
 #opponent {left: 500px; top: 500px;}
-#opponent .body {background-image: url(/Users/ibraimmartinez/Desktop/project-2/images/body1.png);}
-#opponent .head {background-image: url(/Users/ibraimmartinez/Desktop/project-2/Users/ibraimmartinez/Desktop/project-2/images/head1.png);}
+#opponent .body {background-image: url(/racing/images/body1.png);}
+#opponent .head {background-image: url(/racing/images/head1.png);}
 
 .character.standUp .head {
 	background-position: 0px 0px;
@@ -154,20 +154,20 @@ aside ul {list-style-type: none; margin-left: 0; padding-left: 0; margin-bottom:
 	border-collapse: separate;
 	display: table;
 	border-width: 16px;
-	-moz-border-image: url(/Users/ibraimmartinez/Desktop/project-2/images/outer.png) 14 15 14 16 repeat;
-	-webkit-border-image: url(/Users/ibraimmartinez/Desktop/project-2/images/outer.png) 14 15 14 16 repeat;
-	-o-border-image: url(/Users/ibraimmartinez/Desktop/project-2/images/outer.png) 14 15 14 16 repeat;
-	border-image: url(/Users/ibraimmartinez/Desktop/project-2/images/outer.png) 14 15 14 16 repeat; background-image: url(/Users/ibraimmartinez/Desktop/project-2/images/mud.png);
+	-moz-border-image: url(/racing/images/outer.png) 14 15 14 16 repeat;
+	-webkit-border-image: url(/racing/images/outer.png) 14 15 14 16 repeat;
+	-o-border-image: url(/racing/images/outer.png) 14 15 14 16 repeat;
+	border-image: url(/racing/images/outer.png) 14 15 14 16 repeat; background-image: url(/racing/images/mud.png);
 	 position: absolute; height: 80vh; width: 80vw; margin: 5vw; margin-top: 5vh;
 }
 
 
 .track .inner {
-	background-image: url(/Users/ibraimmartinez/Desktop/project-2/images/bg.png);
-	border-image: url(/Users/ibraimmartinez/Desktop/project-2/images/inner.png); border-image-slice: 16 16 16 16 fill; border-image-width: 16px 16px 16px 16px; border-image-outset: 0px 0px 0px 0px; border-image-repeat: round round;
+	background-image: url(/racing/images/bg.png);
+	border-image: url(/racing/images/inner.png); border-image-slice: 16 16 16 16 fill; border-image-width: 16px 16px 16px 16px; border-image-outset: 0px 0px 0px 0px; border-image-repeat: round round;
 	border-collapse: separate; margin-top: 15vh; margin-left: 10vw; display: table; solid  transparent; background-color: green; width: 60vw; height: 50vh;}
 
-.horse {background-image: url(/Users/ibraimmartinez/Desktop/project-2/images/horse2.png);}
+.horse {background-image: url(/racing/images/horse2.png);}
 .horse.runLeft {
 	width: 96px;
 	height: 60px;
@@ -241,29 +241,29 @@ opacity: 0.7;
 	position: absolute; top: 4vh; z-index: 999;
 }
 
-#horse4 .rider .head {background-image: url(/Users/ibraimmartinez/Desktop/project-2/images/head2.png);}
-#horse4 .rider .body {background-image: url(/Users/ibraimmartinez/Desktop/project-2/images/body3.png);}
+#horse4 .rider .head {background-image: url(/racing/images/head2.png);}
+#horse4 .rider .body {background-image: url(/racing/images/body3.png);}
 
 
-#horse3 .rider .head {background-image: url(/Users/ibraimmartinez/Desktop/project-2/images/head1.png);}
-#horse3 .rider .body {background-image: url(/Users/ibraimmartinez/Desktop/project-2/images/body1.png);}
+#horse3 .rider .head {background-image: url(/racing/images/head1.png);}
+#horse3 .rider .body {background-image: url(/racing/images/body1.png);}
 
-#horse2 .rider .head {background-image: url(/Users/ibraimmartinez/Desktop/project-2/images/head4.png);}
-#horse2 .rider .body {background-image: url(/Users/ibraimmartinez/Desktop/project-2/images/body4.png);}
+#horse2 .rider .head {background-image: url(/racing/images/head4.png);}
+#horse2 .rider .body {background-image: url(/racing/images/body4.png);}
 
 #horse2 {
 	position: absolute; top: 8vh;  z-index: 999;
-	background-image: url(/Users/ibraimmartinez/Desktop/project-2/images/horse3.png);
+	background-image: url(/racing/images/horse3.png);
 }
 
 #horse3 {
 	position: absolute; top: 12vh;  z-index: 999;
-	background-image: url(/Users/ibraimmartinez/Desktop/project-2/images/horse1.png);
+	background-image: url(/racing/images/horse1.png);
 }
 
 #horse4 {
 	position: absolute; top: 16vh; z-index: 999;
-	background-image: url(/Users/ibraimmartinez/Desktop/project-2/images/horse4.png);
+	background-image: url(/racing/images/horse4.png);
 }
 
 
@@ -284,7 +284,7 @@ opacity: 0.7;
 	position: absolute;
 	margin-left: 40px;
 	margin-top: -16px;
-	background-image: url(/Users/ibraimmartinez/Desktop/project-2/images/head0.png);
+	background-image: url(/racing/images/head0.png);
 	width: 32px;
 	height: 32px;
 }
@@ -441,7 +441,7 @@ label {clear: left;}
 
 #results {width: auto; position: absolute; margin-top: 8vh; margin-left: 48vw;}
 #results td {height: 30px; width: 30px; background-repeat: no-repeat; background-position: 0px -64px;}
-#results .horse1 { background-image: url(/Users/ibraimmartinez/Desktop/project-2/images/head0.png);}
-#results .horse2 {  background-image: url(/Users/ibraimmartinez/Desktop/project-2/images/head4.png);}
-#results .horse3 {  background-image: url(/Users/ibraimmartinez/Desktop/project-2/images/head1.png);}
-#results .horse4 {  background-image: url(/Users/ibraimmartinez/Desktop/project-2/images/head2.png);}
+#results .horse1 { background-image: url(/racing/images/head0.png);}
+#results .horse2 {  background-image: url(/racing/images/head4.png);}
+#results .horse3 {  background-image: url(/racing/images/head1.png);}
+#results .horse4 {  background-image: url(/racing/images/head2.png);}
