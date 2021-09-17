@@ -165,7 +165,7 @@ aside ul {list-style-type: none; margin-left: 0; padding-left: 0; margin-bottom:
 .track .inner {
 	background-image: url(/Users/ibraimmartinez/Desktop/project-2/images/bg.png);
 	border-image: url(/Users/ibraimmartinez/Desktop/project-2/images/inner.png); border-image-slice: 16 16 16 16 fill; border-image-width: 16px 16px 16px 16px; border-image-outset: 0px 0px 0px 0px; border-image-repeat: round round;
-	border-collapse: separate; margin-top: 15vh; margin-left: 10vw; display: table; solid  transparent; background-color: green; width: 60vw; height: 50vh;}
+	border-collapse: separate; margin-top: 15vh; margin-left: 10vw; display: table; background-color: green; width: 60vw; height: 50vh;}
 
 .horse {background-image: url(/Users/ibraimmartinez/Desktop/project-2/images/horse2.png);}
 .horse.runLeft {
