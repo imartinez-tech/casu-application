@@ -67,12 +67,15 @@ THEN I can rinse, wash & repeat.
 - Node.js
 
 
+## Walk trhough of Casu appliction! User creates an account, plays rock paper scissor shoot, and then logs out and back in and thier win records are stored in our databse!
+
+![Casu-Application  (1)](https://user-images.githubusercontent.com/28649817/133907334-5caf1a5a-ad48-4afb-89c9-9181bfcd733f.gif)
 
 
 
+## Link to Casu! Click the Play button, sign up for an account and have fun!!
 
-
-
+https://casu-project.herokuapp.com/ 
 
 
 
