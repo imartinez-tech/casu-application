@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Project extends Model {}
+class Game extends Model {}
 
-Project.init(
+Game.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,22 +11,24 @@ Project.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
-      type: DataTypes.STRING,
+
+    //player choice is 1 = rock, player choice 2 = paper, player choice 3 = scissors
+    player_choice: {
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
-    description: {
-      type: DataTypes.STRING,
-    },
-    date_created: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
-    },
-    needed_funding: {
-      type: DataTypes.FLOAT,
+
+    computer_choice: {
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
+
+    // 1 = player wins, 2 = player loses
+    outcome: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    
     user_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -40,8 +42,8 @@ Project.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'project',
+    modelName: 'game',
   }
 );
 
-module.exports = Project;
+module.exports = Game;
