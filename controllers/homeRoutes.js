@@ -1,11 +1,11 @@
 const router = require('express').Router();
-const { Project, User } = require('../models');
+const { Game, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-    // Get all projects and JOIN with user data
-    const projectData = await Project.findAll({
+    // Get all games and JOIN with user data
+    const gameData = await Game.findAll({
       include: [
         {
           model: User,
@@ -15,11 +15,11 @@ router.get('/', async (req, res) => {
     });
 
     // Serialize data so the template can read it
-    const projects = projectData.map((project) => project.get({ plain: true }));
+    const games = gameData.map((game) => game.get({ plain: true }));
 
     // Pass serialized data and session flag into template
     res.render('homepage', { 
-      projects, 
+      games, 
       logged_in: req.session.logged_in 
     });
   } catch (err) {
@@ -27,9 +27,9 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/project/:id', async (req, res) => {
+router.get('/game/:id', async (req, res) => {
   try {
-    const projectData = await Project.findByPk(req.params.id, {
+    const gameData = await Game.findByPk(req.params.id, {
       include: [
         {
           model: User,
@@ -38,10 +38,10 @@ router.get('/project/:id', async (req, res) => {
       ],
     });
 
-    const project = projectData.get({ plain: true });
-
-    res.render('project', {
-      ...project,
+    const game = gameData.get({ plain: true });
+    console.log(game)
+    res.render('game', {
+      ...game,
       logged_in: req.session.logged_in
     });
   } catch (err) {
@@ -49,13 +49,35 @@ router.get('/project/:id', async (req, res) => {
   }
 });
 
+
+router.post('/game/save', async (req, res) => {
+  try{
+    const gameData = await Game.create({...req.body, user_id: req.session.user_id});
+  
+    if(gameData){
+      res
+      .status(200)
+      .json({gameData})
+      return;
+    }
+    
+    res
+    .status(400)
+    .json({message: 'Failed to save game data. Please try again.'})
+  }
+  catch(error){
+    res.status(500).json(err);
+  }
+});
+
+
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Project }],
+      include: [{ model: Game }],
     });
 
     const user = userData.get({ plain: true });
