@@ -20,11 +20,11 @@ info, a leaderboard for our gamers and a create profile page. All scores recorde
 
 
 
-2. The games featured for now are Rock, Paper, Scissors & a Racing game.
+2. The games featured for now are Rock, Paper, Scissors.
 
 
 
-3. During future development We will later include a dice game, arm wrestling, tic tac toe, & a host of others.
+3. During future development We will later include a dice game, arm wrestling, tic tac toe, a Racing game & a host of others.
 
 
 
@@ -34,17 +34,6 @@ info, a leaderboard for our gamers and a create profile page. All scores recorde
 5. Have fun & enjoy!
 
 
-
-
-
-
-2. The games featured for now are Rock, Paper, Scissors & a Racing game. 
-
-3. During future development We will later include a dice game, arm wrestling, tic tac toe, & a host of others.
-
-4. Modern day games with an old-school twist, playable and enjoyable for ALL!
-
-5. Have fun & enjoy!
 
 ## USER STORY 
 GIVEN I open up CASU, WHEN I get to the homepage THEN I'm given a choice to sign up & play CASU, by creating a user name and password. WHEN I do this, I'm taken to a menu that lists the number of games I can play. THEN I am presented with a drop down menu with a create profile choice, a leaderboard & contact information. WHEN I attempt to play a game, i click the button between game one, game two & game three. THEN after any game has been played, WHEN you finish, a score is recorded and saved to our database. THEN the game is over WHEN i win, I will be celebrated & confetti will rain down on me or whomever wins! To the victor goes the spoils!!! THEN I can rinse, wash & repeat.
@@ -76,6 +65,10 @@ THEN I can rinse, wash & repeat.
 - Sequelize
 - Express
 - Node.js
+
+
+
+
 
 
 
