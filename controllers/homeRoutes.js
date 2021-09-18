@@ -50,26 +50,6 @@ router.get('/game/:id', async (req, res) => {
 });
 
 
-router.post('/game/save', async (req, res) => {
-  try{
-    const gameData = await Game.create({...req.body, user_id: req.session.user_id});
-  
-    if(gameData){
-      res
-      .status(200)
-      .json({gameData})
-      return;
-    }
-    
-    res
-    .status(400)
-    .json({message: 'Failed to save game data. Please try again.'})
-  }
-  catch(error){
-    res.status(500).json(err);
-  }
-});
-
 
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {

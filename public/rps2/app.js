@@ -1,12 +1,35 @@
+
 const game = () => {
   let pScore = 0;
   let cScore = 0;
+  const playerScore = document.querySelector(".player-score p");
+  const computerScore = document.querySelector(".computer-score p");
+  const canvas = document.createElement('canvas');
+  document.body.appendChild(canvas)
 
   //Start the Game
-  const startGame = () => {
+  const startGame = async () => {
     const playBtn = document.querySelector(".intro button");
     const introScreen = document.querySelector(".intro");
     const match = document.querySelector(".match");
+
+    // Pull scores between user and computer
+    const response = await fetch('/game/score', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+    });
+
+    if (response.ok) {
+      const {userWins, computerWins} = await response.json();
+
+      // Set score from request from past games
+      pScore = userWins;
+      playerScore.innerHTML = userWins;
+      cScore = computerWins;
+      computerScore.innerHTML = computerWins;
+    } else {
+      alert(response.statusText);
+    }
 
     playBtn.addEventListener("click", () => {
       introScreen.classList.add("fadeOut");
@@ -19,6 +42,7 @@ const game = () => {
     const playerHand = document.querySelector(".player-hand");
     const computerHand = document.querySelector(".computer-hand");
     const hands = document.querySelectorAll(".hands img");
+
 
     hands.forEach(hand => {
       hand.addEventListener("animationend", function() {
@@ -34,9 +58,9 @@ const game = () => {
         const computerNumber = Math.floor(Math.random() * 3);
         const computerChoice = computerOptions[computerNumber];
 
-        setTimeout(() => {
+        setTimeout(async() => {
           //Here is where we call compare hands
-          compareHands(this.textContent, computerChoice);
+          await compareHands(this.textContent, computerChoice);
           //Update Images
           playerHand.src = `./assets/${this.textContent}.png`;
           computerHand.src = `./assets/${computerChoice}.png`;
@@ -48,14 +72,18 @@ const game = () => {
     });
   };
 
-  const updateScore = () => {
-    const playerScore = document.querySelector(".player-score p");
-    const computerScore = document.querySelector(".computer-score p");
+  const updateScore = async (results) => {
+    
+    const response = await fetch('/game/save', {
+      method: 'POST',
+      body: JSON.stringify({ results }),
+      headers: { 'Content-Type': 'application/json' },
+    });
     playerScore.textContent = pScore;
     computerScore.textContent = cScore;
   };
 
-  const compareHands = (playerChoice, computerChoice) => {
+  const compareHands = async(playerChoice, computerChoice) => {
     //Update Text
     const winner = document.querySelector(".winner");
     //Checking for a tie
@@ -64,16 +92,18 @@ const game = () => {
       return;
     }
     //Check for Rock
+    //player choice is 1 = rock, player choice 2 = paper, player choice 3 = scissors
     if (playerChoice === "rock") {
       if (computerChoice === "scissors") {
         winner.textContent = "Player Wins";
+        confetti();
         pScore++;
-        updateScore();
+        await updateScore({outcome: 1, player_choice: 1, computer_choice: 3 });
         return;
       } else {
         winner.textContent = "Computer Wins";
         cScore++;
-        updateScore();
+        await updateScore({outcome: 2, player_choice: 1, computer_choice: 2 });
         return;
       }
     }
@@ -82,12 +112,13 @@ const game = () => {
       if (computerChoice === "scissors") {
         winner.textContent = "Computer Wins";
         cScore++;
-        updateScore();
+        await updateScore({outcome: 2, player_choice: 2, computer_choice: 3 });
         return;
       } else {
         winner.textContent = "Player Wins";
+        confetti();
         pScore++;
-        updateScore();
+        await updateScore({outcome: 1, player_choice: 2, computer_choice: 1 });
         return;
       }
     }
@@ -96,12 +127,13 @@ const game = () => {
       if (computerChoice === "rock") {
         winner.textContent = "Computer Wins";
         cScore++;
-        updateScore();
+        await updateScore({outcome: 2, player_choice: 3, computer_choice: 1 });
         return;
       } else {
         winner.textContent = "Player Wins";
+        confetti();
         pScore++;
-        updateScore();
+        await updateScore({outcome: 1, player_choice: 3, computer_choice: 2 });
         return;
       }
     }
