@@ -79,4 +79,23 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+
+
+router.get('/leaderboard', async (req, res) => {
+  res.render('leaderboard')
+});
+
+router.get('/rules', async (req, res) => {
+  try {
+    res.render('rules')
+  } catch (error) {require.status(500).json(err);
+    
+  }
+  res.render('rules')
+});
+
+router.get('/contact', async (req, res) => {
+  res.render('contact')
+});
+
 module.exports = router;
