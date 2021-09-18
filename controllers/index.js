@@ -6,7 +6,7 @@ const homeRoutes = require('./homeRoutes');
 const leaderboardRoutes = require('./leaderboardroutes');
 const signupRoutes = require('./signupRoutes');
 const contactRoutes = require('./contactroutes');
-const gameRoutes = require('./gameRoutes')
+const gameRoutes = require('./gameroutes')
 
 router.use('/', homeRoutes);
 router.use('/api', apiRoutes);
