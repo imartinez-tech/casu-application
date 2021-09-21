@@ -1,59 +1,49 @@
 # CASU is an arcade-style gaming application created by us, for you, for FREE!
 
-Manifested & curated by Steven, Ibraim, Edna & Joshua.
+Casu means by chance, and was manifested & curated by Steven, Ibraim, Edna & Joshua.
 
-This app was designed to be very easy to navigate, play and enjoy. However, to fully enjoy this site, you have to sign up & log in soon after. Our app saves your login info for future use, by creating a username, password & listing your email address. Once this is done, you'll be greeted by our dropdown menu, which contains some contact info, a leaderboard for our gamers and a create profile page. All scores recorded will also be saved to our database.
-
-
-- CASU is an arcade-style gaming application created by us, for you, for FREE! 
-- Manifested & curated by Steven, Ibraim, Edna & Joshua.
-- This app was designed to be very easy to navigate, play and enjoy. However, to fully enjoy this site,
-you have to sign up & log in soon after. Our app saves your login info for future use, by creating a username, password &
-listing your email address. Once this is done, you'll be greeted by our dropdown menu, which contains some contact
-info, a leaderboard for our gamers and a create profile page. All scores recorded will also be saved to our database. 
+This app was designed to be easy to navigate, play, and have to have fun!
 
 
--
 ## Getting Started
 
-1. Our Site features 2 games for starters (1 playable & the other two created for the future.)
+1. Our Site features 1 game for version 1 
 
+2. The game featured is Rock Paper Scissors
 
+3. To fully enjoy this site, sign up! 
 
-2. The games featured for now are Rock, Paper, Scissors.
+4. To sign up, create a username, add an email, and create a password and click the signup button. Then you'll be routed to your profile page where you can play Rock Paper Scissors. Our app saves your login information for future use, and all scores will be saved to our database so that each time you log in, your win and loss records will be preserved. 
 
+5. If you win a round of Rock Paper Scissors, your victory will be celebrated & confetti will rain down on you (to the victor goes the spoils!!!).
+ 
+6. Have fun & enjoy!
 
+## Future Development
 
-3. During future development We will later include a dice game, arm wrestling, tic tac toe, a Racing game & a host of others.
-
-
-
-4. Modern day games with an old-school twist, playable and enjoyable for ALL!
-
-
-5. Have fun & enjoy!
-
-
-
-## USER STORY 
-GIVEN I open up CASU, WHEN I get to the homepage THEN I'm given a choice to sign up & play CASU, by creating a user name and password. WHEN I do this, I'm taken to a menu that lists the number of games I can play. THEN I am presented with a drop down menu with a create profile choice, a leaderboard & contact information. WHEN I attempt to play a game, i click the button between game one, game two & game three. THEN after any game has been played, WHEN you finish, a score is recorded and saved to our database. THEN the game is over WHEN i win, I will be celebrated & confetti will rain down on me or whomever wins! To the victor goes the spoils!!! THEN I can rinse, wash & repeat.
+During future development we will develop a dice game, arm wrestling, tic tac toe, a horse racing game, a leaderboard, and a comment page so that players can interact and compete with eachother. 
 
 
 
 # USER STORY
-GIVEN I open up CASU, 
-WHEN I get to the homepage
-THEN I'm given a choice to sign up & play CASU, by creating a user name and password.
-WHEN I do this, I'm taken to a menu that lists the number of games I can play.
-THEN I am presented with a drop down menu with a create profile choice, a leaderboard & contact information.
-WHEN I attempt to play a game, i click the button between game one, game two & game three.
-THEN after any game has been played, 
-WHEN you finish, a score is recorded and saved to our database.
-THEN the game is over
-WHEN i win, I will be celebrated & confetti will rain down on me or whomever wins!
-To the victor goes the spoils!!!
-THEN I can rinse, wash & repeat.
 
+GIVEN I open up CASU
+
+THEN I am routed to the homepage
+
+GIVEN I Click the Play Today button
+
+THEN I'm given a choice to sign up & play CASU, by creating a username and password
+
+THEN I'm taken to a profile with available games
+
+GIVEN I click on the Rock-Paper-Scissors button I am routed to the game page
+
+WHEN I chose an action I either win, lose, or tie with the computer
+
+AND A score is recorded and saved to my profile
+
+GIVEN I logout and then sign in again, my previous wins and losses will be visible 
 
 
 
@@ -65,15 +55,22 @@ THEN I can rinse, wash & repeat.
 - Sequelize
 - Express
 - Node.js
+- Postman
+- https://www.npmjs.com/package/canvas-confetti
+- https://app.diagrams.net/
 
 
-## Walk trhough of Casu appliction! User creates an account, plays rock paper scissor shoot, and then logs out and back in and thier win records are stored in our databse!
+## Walk through of Casu appliction
+
+User creates an account, plays Rock Paper Scissors, and then logs out and back in, and their win records are stored in our databse!
 
 ![Casu-Application  (1)](https://user-images.githubusercontent.com/28649817/133907334-5caf1a5a-ad48-4afb-89c9-9181bfcd733f.gif)
 
 
 
-## Link to Casu! Click the Play button, sign up for an account and have fun!!
+## Link to Casu!
+
+Click the Play button, sign up for an account and have fun!!
 
 https://casu-project.herokuapp.com/ 
 
