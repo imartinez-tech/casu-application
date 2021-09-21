@@ -5,6 +5,9 @@
     box-sizing: border-box;
   }
 
+  .game {
+    flex-direction: column;
+  } 
 
   section {
     /* background-color: rgb(39, 41, 68); */
@@ -13,9 +16,9 @@
   
   .score {
     color: rgb(224, 224, 224);
-    height: 20vh;
+    /* height: 20vh; */
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
   }
   .score h2 {
@@ -29,7 +32,7 @@
   
   .intro {
     color: rgb(224, 224, 224);
-    height: 50vh;
+    /* height: 50vh; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,12 +40,16 @@
     transition: opacity 0.5s ease;
   }
   
+  .game-options {
+    align-items: center;
+  }
+
   .intro h1 {
     font-size: 50px;
   }
   .intro button,
   .match button {
-    width: 150px;
+    width: 100px;
     height: 50px;
     background: none;
     /* border: none; */
@@ -54,8 +61,9 @@
   }
 
   .match {
-    position: absolute;
-    top: 50%;
+    position: relative;
+    align-items: center;
+    top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
     transition: opacity 0.5s ease 0.5s;
