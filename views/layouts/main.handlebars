@@ -36,16 +36,15 @@
                       class="fa fa-angle-right"></i></span></a></li>
               <li><a href="/leaderboard">LEADER BOARD <span class="indicator"><i class="fa fa-angle-right"></i></span></a>
               </li>
-              <li><a href="/rules">RULES <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
               <li class="nav-last"><a href="/contact">CONTACT <span class="indicator"><i
                       class="fa fa-angle-right"></i></span></a></li>
             </ul>
             <!-- Conditionally render login or logout links -->
             {{#if logged_in}}
-            <a href="/profile">profile</a> |
+            <button> <a href="/profile">profile</a></button> |
             <button class="no-button" id="logout">logout</button>
             {{else}}
-            <a href="/login">login</a>
+            <button> <a href="/login">login</a></button>
             {{/if}}
           </nav>
         </div>
@@ -79,7 +78,7 @@
   <script src="js/jquery.flexslider.js"></script>
   <script src="js/jquery.smooth-scroll.js"></script>
   <script src="js/modernizr.js"></script>
-  <script src="js/waypoints.min.js"></script>
+  <script src="js/waypoints.min.js"></script> 
 </body>
 
 </html>

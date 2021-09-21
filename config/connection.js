@@ -11,11 +11,12 @@ if (process.env.JAWSDB_URL) {
     process.env.DB_USER,
     process.env.DB_PASSWORD,
     {
-      host: 'localhost',
+      host: 'us-cdbr-east-04.cleardb.com',
       dialect: 'mysql',
       port: 3306
     }
   );
+  sequelize = new Sequelize('mysql://b99b66a567cdaa:67906a71@us-cdbr-east-04.cleardb.com/heroku_053dc4caf001f3d?reconnect=true');
 }
 
-module.exports = sequelize;
+module.exports = sequelize
