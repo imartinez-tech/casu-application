@@ -10,13 +10,14 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/flexslider.css" type="text/css">
-  <link href="css/styles.css?v=1.6" rel="stylesheet">
   <link href="css/queries.css?v=1.6" rel="stylesheet">
   <link href="css/jquery.fancybox.css" rel="stylesheet">
+  <link href="css/styles.css?v=1.6" rel="stylesheet">
   <!-- Fonts -->
   <link
     href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic'
     rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/style3.css">
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -41,10 +42,10 @@
             </ul>
             <!-- Conditionally render login or logout links -->
             {{#if logged_in}}
-            <button> <a href="/profile">profile</a></button> |
-            <button class="no-button" id="logout">logout</button>
+            <button class="buttons"> <a href="/profile">profile</a></button> |
+            <button class="no-button buttons" id="logout">logout</button>
             {{else}}
-            <button> <a href="/login">login</a></button>
+            <button class="buttons"><a href="/login">login</a></button>
             {{/if}}
           </nav>
         </div>
